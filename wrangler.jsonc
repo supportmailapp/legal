@@ -14,5 +14,6 @@
   },
   "vars": {
     "NODE_VERSION": "24"
-  }
+  },
+  "preview_urls": false
 }
