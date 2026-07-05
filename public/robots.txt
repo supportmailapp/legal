@@ -2,4 +2,5 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://legal.supportmail.dev/sitemap.xml
+Sitemap: https://legal.supportmail.dev/sitemap-index.xml
+
