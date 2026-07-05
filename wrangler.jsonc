@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "compatibility_date": "2026-07-05",
+  "name": "sm-legal",
+  "assets": {
+    "directory": "./dist",
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "route": {
+    "custom_domain": true,
+    "pattern": "legal.supportmail.dev"
+  }
+}

@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import "../styles/global.css";
+
+const all = await getCollection("legal");
+const docTypes = [...new Set(all.map((e) => e.id.split("/")[0]))].sort();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <title>SupportMail | Legal</title>
+  </head>
+  <body class="bg-background text-foreground min-h-screen">
+    <div class="max-w-2xl mx-auto px-6 py-16">
+      <h1 class="text-2xl font-bold mb-2">Legal</h1>
+      <p class="text-muted-foreground mb-8">Legal documents and policies.</p>
+      <ul class="space-y-2">
+        {
+          docTypes.map((dt) => (
+            <li>
+              <a
+                href={`/${dt}`}
+                class="text-primary hover:underline capitalize"
+              >
+                {dt.replace(/-/g, " ")}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </body>
+</html>

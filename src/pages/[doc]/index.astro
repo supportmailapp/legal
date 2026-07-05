@@ -1,0 +1,43 @@
+---
+import { getCollection, render } from "astro:content";
+import LegalLayout from "../../layouts/LegalLayout.astro";
+
+const VERSIONED_DOCS = ["privacy", "terms"];
+
+export async function getStaticPaths() {
+  const all = await getCollection("legal");
+  const docTypes = [...new Set(all.map((e) => e.id.split("/")[0]))];
+  return docTypes.map((doc) => ({ params: { doc } }));
+}
+
+const { doc } = Astro.params;
+
+const all = await getCollection(
+  "legal",
+  (entry) => entry.id.startsWith(`${doc}/`) || entry.id === doc,
+);
+
+if (!all.length) return Astro.redirect("/404");
+
+all.sort(
+  (a, b) => b.data.effectiveDate.getTime() - a.data.effectiveDate.getTime(),
+);
+
+const current = all[0];
+const { Content } = await render(current);
+
+const isVersioned = VERSIONED_DOCS.includes(doc!);
+const versions = isVersioned
+  ? all.map((e, i) => ({
+      date: e.id.split("/")[1],
+      effectiveDate: e.data.effectiveDate,
+      href: i === 0 ? `/${doc}` : `/${doc}/${e.id.split("/")[1]}`,
+      isActive: i === 0,
+      isLatest: i === 0,
+    }))
+  : [];
+---
+
+<LegalLayout title={current.data.title} docType={doc!} versions={versions}>
+  <Content />
+</LegalLayout>

@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Generated files
+worker-configuration.d.ts
+pnpm-lock.yaml
+
+# Content (markdown managed manually)
+src/content/
