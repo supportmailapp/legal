@@ -10,10 +10,10 @@
   },
   "route": {
     "custom_domain": true,
-    "pattern": "legal.supportmail.dev"
+    "pattern": "legal.supportmail.dev",
   },
   "vars": {
-    "NODE_VERSION": "24"
+    "NODE_VERSION": "24",
   },
-  "preview_urls": false
+  "preview_urls": false,
 }

@@ -8,5 +8,3 @@ dist/
 worker-configuration.d.ts
 pnpm-lock.yaml
 
-# Content (markdown managed manually)
-src/content/
