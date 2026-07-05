@@ -13,6 +13,7 @@
     "gen": "wrangler types",
     "format": "prettier --write ."
   },
+  "packageManager": "pnpm@11.9.0",
   "dependencies": {
     "@astrojs/cloudflare": "^14.1.1",
     "@astrojs/sitemap": "^3.7.3",
