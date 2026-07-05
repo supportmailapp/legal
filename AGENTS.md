@@ -33,7 +33,7 @@ Manage the background server with `astro dev stop`, `astro dev status`, and `ast
 
 ## Architecture
 
-SSR Astro site deployed as a Cloudflare Worker (`@astrojs/cloudflare` adapter). Tailwind v4 via `@tailwindcss/vite`. No React/Vue/Svelte — pure Astro components.
+Static Astro site deployed via Cloudflare Assets (assets-only, no Worker). Tailwind v4 via `@tailwindcss/vite`. No React/Vue/Svelte — pure Astro components.
 
 ### Content system
 

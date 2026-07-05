@@ -3,8 +3,9 @@ document.addEventListener("click", (event) => {
   if (!anchor) return;
 
   try {
-    const url = new URL(anchor.getAttribute("href"), window.location.href);
-    if (url.origin !== window.location.origin) {
+    const href = anchor.getAttribute("href");
+    const url = new URL(href, window.location.href);
+    if (url.protocol === "mailto:" || url.origin !== window.location.origin) {
       anchor.setAttribute("target", "_blank");
       anchor.setAttribute("rel", "noopener noreferrer");
     }
