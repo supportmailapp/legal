@@ -11,5 +11,8 @@
   "route": {
     "custom_domain": true,
     "pattern": "legal.supportmail.dev"
+  },
+  "vars": {
+    "NODE_VERSION": "24"
   }
 }
