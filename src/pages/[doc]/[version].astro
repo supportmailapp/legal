@@ -2,8 +2,6 @@
 import { getCollection, getEntry, render } from "astro:content";
 import LegalLayout from "../../layouts/LegalLayout.astro";
 
-const VERSIONED_DOCS = ["privacy", "terms"];
-
 export async function getStaticPaths() {
   const VERSIONED = ["privacy", "terms"];
   const all = await getCollection("legal");

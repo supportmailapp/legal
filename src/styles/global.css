@@ -56,8 +56,7 @@
     }
   }
 
-  /* Any <code> not in an .expressive-code div */
-  .prose code:not(.expressive-code code) {
+  .prose code:not(.astro-code code) {
     background-color: var(--color-muted);
     color: var(--color-foreground);
     padding: 0.2rem 0.4rem;

@@ -19,7 +19,9 @@ interface Props {
 const { title, docType, versions } = Astro.props;
 
 const allEntries = await getCollection("legal");
-const docTypes = [...new Set(allEntries.map((e) => e.id.split("/")[0]))].sort();
+const NAV_ORDER = ["terms", "privacy", "imprint", "licenses", "right-of-withdrawal"];
+const known = new Set(allEntries.map((e) => e.id.split("/")[0]));
+const docTypes = NAV_ORDER.filter((d) => known.has(d));
 ---
 
 <html lang="en">

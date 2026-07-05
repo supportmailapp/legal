@@ -21,7 +21,7 @@ If you cancel this Agreement, we will promptly refund to you any payments we hav
 
 **To: contact.lukez@proton.me**
 
-```
+```txt
 [Your first and last name]
 [Your email address]
 
