@@ -3,7 +3,20 @@ import { getCollection } from "astro:content";
 import "../styles/global.css";
 
 const all = await getCollection("legal");
-const docTypes = [...new Set(all.map((e) => e.id.split("/")[0]))].sort();
+const byDocType = all.reduce((map, e) => {
+  const dt = e.id.split("/")[0];
+  const existing = map.get(dt);
+  if (
+    !existing ||
+    (existing.data.order === undefined && e.data.order !== undefined)
+  ) {
+    map.set(dt, e);
+  }
+  return map;
+}, new Map());
+const docTypes = [...byDocType.entries()]
+  .sort(([, a], [, b]) => (a.data.order ?? 0) - (b.data.order ?? 0))
+  .map(([dt]) => dt);
 ---
 
 <html lang="en">
@@ -16,18 +29,15 @@ const docTypes = [...new Set(all.map((e) => e.id.split("/")[0]))].sort();
     <title>SupportMail | Legal</title>
   </head>
   <body class="bg-background text-foreground min-h-screen">
-    <div class="max-w-2xl mx-auto px-6 py-16">
-      <h1 class="text-2xl font-bold mb-2">Legal</h1>
-      <p class="text-muted-foreground mb-8">Legal documents and policies.</p>
-      <ul class="space-y-2">
+    <div class="max-w-2xl mx-auto px-6 py-16 prose dark:prose-invert">
+      <h1>Legal</h1>
+      <p>Legal documents and policies.</p>
+      <ul class="space-y-2!">
         {
           docTypes.map((dt) => (
             <li>
-              <a
-                href={`/${dt}`}
-                class="text-primary hover:underline capitalize"
-              >
-                {dt.replace(/-/g, " ")}
+              <a href={`/${dt}`}>
+                {byDocType.get(dt)?.data.title ?? dt.replace(/-/g, " ")}
               </a>
             </li>
           ))
