@@ -12,6 +12,10 @@ Germany
 
 **No acceptance of parcels or packages!**
 
+In accordance with § 19 UStG, no VAT is charged.
+
+SupportMail is a product of _LukeZ Development by Luca Hentschel_.
+
 E-Mail: [contact.lukez@proton.me](mailto:contact.lukez@proton.me)  
 I usually respond within business 24 hours.
 
