@@ -7,6 +7,7 @@ const legal = defineCollection({
   schema: z.object({
     title: z.string(),
     effectiveDate: z.coerce.date().optional(),
+    order: z.coerce.number().optional(),
   }),
 });
 
