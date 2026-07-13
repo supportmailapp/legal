@@ -37,7 +37,7 @@ Static Astro site deployed via Cloudflare Assets (assets-only, no Worker). Tailw
 
 ### Content system
 
-**Versioned docs** (`privacy`, `terms`) store files as `src/content/legal/<doc>/<YYYY-MM-DD>.md`. **Static docs** (`imprint`, `licenses`, `right-of-withdrawal`) store a single `src/content/legal/<doc>/index.md`. The content collection (`src/content.config.ts`) uses glob loader; each file requires frontmatter:
+**Versioned docs** (`privacy`, `terms`) store files as `src/content/legal/<doc>/<YYYY-MM-DD>.md`. **Static docs** (`legal-notice`, `licenses`, `right-of-withdrawal`) store a single `src/content/legal/<doc>/index.md`. The content collection (`src/content.config.ts`) uses glob loader; each file requires frontmatter:
 
 ```md
 ---
@@ -52,7 +52,7 @@ effectiveDate: <YYYY-MM-DD>
 | --------------------- | ---------------------- | ------------------------ |
 | `privacy`             | `/privacy`             | Privacy Policy           |
 | `terms`               | `/terms`               | Terms of Service         |
-| `imprint`             | `/imprint`             | Imprint (§ 5 TMG)        |
+| `legal-notice`        | `/legal-notice`        | Imprint (§ 5 TMG)        |
 | `right-of-withdrawal` | `/right-of-withdrawal` | Right of Withdrawal      |
 | `licenses`            | `/licenses`            | Open-source license list |
 
@@ -77,7 +77,7 @@ Historical GitBook source files are archived at `../old_v2/smdocs/<YYYY-MM-DD>/`
 
 `<doc>` matches a subdirectory name under `src/content/legal/`. `<version>` matches the filename stem (e.g. `2026-07-04`).
 
-Only `privacy` and `terms` are **versioned** — they show a version sidebar and support `/<doc>/<version>` routes. All other doc types (`imprint`, `licenses`, `right-of-withdrawal`) are **static** — latest file only, no version UI, `/<doc>/<version>` returns 404.
+Only `privacy` and `terms` are **versioned** — they show a version sidebar and support `/<doc>/<version>` routes. All other doc types (`legal-notice`, `licenses`, `right-of-withdrawal`) are **static** — latest file only, no version UI, `/<doc>/<version>` returns 404.
 
 To add a new **static** doc type: create `src/content/legal/<new-doc>/index.md`. To add a new **versioned** doc type: create dated `.md` files and add the name to `VERSIONED_DOCS` in both `src/pages/[doc]/index.astro` and `src/pages/[doc]/[version].astro`. To publish a new version of a versioned doc, add a dated `.md` file — the index page auto-promotes the newest.
 
