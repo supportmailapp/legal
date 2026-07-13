@@ -1,11 +1,10 @@
 ---
 title: Right of Withdrawal
-effectiveDate: 2026-07-04
 ---
 
 # Right of Withdrawal
 
-### Your Right
+## Your Right
 
 You have the right to revoke this contract within fourteen days without giving any reason. The revocation period is fourteen days from the date of the conclusion of the contract.
 
@@ -13,13 +12,13 @@ To exercise your right of withdrawal, you must inform us by means of a clear dec
 
 To meet the withdrawal deadline, it is mandatory to send the notice of your decision to withdraw before the end of the withdrawal period.
 
-### Consequences
+## Consequences
 
 If you cancel this Agreement, we will promptly refund to you any payments we have received from you, but no later than fourteen days after we receive your notice of cancellation. The refund will be made by the same means of payment that you used for the original transaction, unless expressly agreed otherwise, and you will not incur any fees for this refund.
 
 ### Cancellation form example
 
-**To: contact.lukez@proton.me**
+**To: [contact.lukez@proton.me](mailto:contact.lukez@proton.me)**
 
 ```txt
 [Your first and last name]

@@ -1,9 +1,8 @@
 ---
-title: Imprint
-effectiveDate: 2026-07-04
+title: Legal Notice
 ---
 
-# Imprint
+# Legal Notice
 
 LukeZ Development by Luca Hentschel  
 Schneeberger Str. 31  
