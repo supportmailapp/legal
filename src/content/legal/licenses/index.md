@@ -5,12 +5,14 @@ title: Licenses
 
 # Licenses
 
+## JavaScript / TypeScript
+
 - [Svelte](https://svelte.dev) - `svelte`, `svelte-check`
 - [SvelteKit with adapters & plugins](https://kit.svelte.dev) - `@sveltejs/kit`, `@sveltejs/adapter-auto`, `@sveltejs/adapter-cloudflare`, `@sveltejs/adapter-node`, `@sveltejs/vite-plugin-svelte`, `@sveltejs/vite-plugin-svelte-inspector`, `@sveltejs/enhanced-img`
 - [Astro with integrations](https://astro.build) - `astro`, `@astrojs/cloudflare`, `@astrojs/sitemap`, `@astrojs/starlight`, `@astrojs/starlight-tailwind`, `@astrojs/svelte`
 - [Vite](https://vitejs.dev) - `vite`
 - [Hono](https://hono.dev)
-- [TypeScript](https://www.typescriptlang.org) - `typescript`, `tsx`, `@tsconfig/bun`
+- [TypeScript](https://www.typescriptlang.org) - `typescript`, `tsx`, `@tsconfig/bun`, `@tsconfig/svelte`
 
 - [Tailwind CSS with plugins](https://tailwindcss.com) - `tailwindcss`, `@tailwindcss/vite`, `@tailwindcss/typography`
 - [tw-animate-css](https://www.npmjs.com/package/tw-animate-css)
@@ -32,6 +34,8 @@ title: Licenses
 - [satteri](https://www.npmjs.com/package/satteri)
 - [satteri-expressive-code](https://www.npmjs.com/package/satteri-expressive-code)
 
+- [Tauri](https://tauri.app) - `@tauri-apps/api`, `@tauri-apps/cli`, `@tauri-apps/plugin-websocket`, `tauri`, `tauri-build`, `tauri-plugin-log`, `tauri-plugin-websocket`
+
 - [Starlight contextual menu](https://www.npmjs.com/package/starlight-contextual-menu)
 - [starlight-image-zoom](https://www.npmjs.com/package/starlight-image-zoom)
 - [starlight-theme-rapide](https://www.npmjs.com/package/starlight-theme-rapide)
@@ -51,6 +55,7 @@ title: Licenses
 - [iovalkey](https://www.npmjs.com/package/iovalkey)
 - [node-cache](https://www.npmjs.com/package/node-cache)
 - [@cacheable/node-cache](https://www.npmjs.com/package/@cacheable/node-cache)
+- [AWS SDK for JavaScript](https://aws.amazon.com/sdk-for-javascript/) - `@aws-sdk/client-s3`
 
 - [ky](https://www.npmjs.com/package/ky)
 - [Socket.IO](https://socket.io) - `socket.io`, `socket.io-client`, `@socket.io/bun-engine`
@@ -93,3 +98,27 @@ title: Licenses
 - [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) - `@types/node`, `@types/bun`, `@types/humanize-duration`, `@types/jsonwebtoken`, `@types/randomstring`, `@types/uuid`
 
 - [Wrangler (Cloudflare)](https://developers.cloudflare.com/workers/wrangler/) - `wrangler`
+
+## Go
+
+- [coder/websocket](https://github.com/coder/websocket)
+
+## Rust
+
+- [Tokio](https://tokio.rs)
+- [Axum](https://github.com/tokio-rs/axum)
+- [reqwest](https://github.com/seanmonstar/reqwest)
+- [DashMap](https://github.com/xacrimon/dashmap)
+- [prometheus (Rust client)](https://github.com/tikv/rust-prometheus)
+- [tracing with tracing-subscriber](https://tokio.rs/tokio/topics/tracing) - `tracing`, `tracing-subscriber`
+- [serde with serde_json](https://serde.rs) - `serde`, `serde_json`
+- [anyhow](https://github.com/dtolnay/anyhow)
+- [thiserror](https://github.com/dtolnay/thiserror)
+- [bytes](https://github.com/tokio-rs/bytes)
+- [http (Rust crate)](https://github.com/hyperium/http)
+- [sha2 (RustCrypto)](https://github.com/RustCrypto/hashes)
+- [base64 (Rust crate)](https://github.com/marshallpierce/rust-base64)
+- [dotenvy](https://github.com/allan2/dotenvy)
+- [log (Rust crate)](https://github.com/rust-lang/log)
+- [keyring (Rust crate)](https://github.com/hwchen/keyring-rs)
+- [yubikey (Rust crate)](https://github.com/iqlusioninc/yubikey.rs)
