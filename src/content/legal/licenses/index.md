@@ -80,7 +80,6 @@ title: Licenses
 - [@sapphire/snowflake](https://www.npmjs.com/package/@sapphire/snowflake)
 - [fast-deep-equal](https://www.npmjs.com/package/fast-deep-equal)
 - [@lukez/fast-deep-equal](https://www.npmjs.com/package/@lukez/fast-deep-equal)
-- [galactic.ts](https://www.npmjs.com/package/galactic.ts)
 - [randomstring](https://www.npmjs.com/package/randomstring)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [cross-env](https://www.npmjs.com/package/cross-env)
