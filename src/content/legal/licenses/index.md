@@ -8,9 +8,13 @@ title: Licenses
 ## JavaScript / TypeScript
 
 - [Svelte](https://svelte.dev) - `svelte`, `svelte-check`
-- [SvelteKit with adapters & plugins](https://kit.svelte.dev) - `@sveltejs/kit`, `@sveltejs/adapter-auto`, `@sveltejs/adapter-cloudflare`, `@sveltejs/adapter-node`, `@sveltejs/vite-plugin-svelte`, `@sveltejs/vite-plugin-svelte-inspector`, `@sveltejs/enhanced-img`
-- [Astro with integrations](https://astro.build) - `astro`, `@astrojs/cloudflare`, `@astrojs/sitemap`, `@astrojs/starlight`, `@astrojs/starlight-tailwind`, `@astrojs/svelte`
+- [SvelteKit with adapters & plugins](https://kit.svelte.dev) - `@sveltejs/kit`, `@sveltejs/adapter-auto`, `@sveltejs/adapter-cloudflare`, `@sveltejs/adapter-node`, `@sveltejs/vite-plugin-svelte`, `@sveltejs/enhanced-img`
+- [Astro with integrations](https://astro.build) - `astro`, `@astrojs/cloudflare`, `@astrojs/sitemap`, `@astrojs/starlight`, `@astrojs/starlight-docsearch`, `@astrojs/starlight-tailwind`, `@astrojs/svelte`
 - [Vite](https://vitejs.dev) - `vite`
+- [Vitest](https://vitest.dev) - `vitest`
+- [VitePress](https://vitepress.dev) - `vitepress`
+- [tsdown](https://tsdown.dev) - `tsdown`
+- [Lightning CSS](https://lightningcss.dev) - `lightningcss`
 - [Hono](https://hono.dev)
 - [TypeScript](https://www.typescriptlang.org) - `typescript`, `tsx`, `@tsconfig/bun`, `@tsconfig/svelte`
 
@@ -18,15 +22,13 @@ title: Licenses
 - [tw-animate-css](https://www.npmjs.com/package/tw-animate-css)
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge)
 - [tailwind-variants](https://www.npmjs.com/package/tailwind-variants)
-- [daisyUI](https://daisyui.com)
 - [clsx](https://www.npmjs.com/package/clsx)
 
 - [bits-ui](https://bits-ui.com)
 - [shadcn-svelte](https://shadcn-svelte.com)
 - [Lucide (Svelte)](https://lucide.dev) - `@lucide/svelte`
 - [Embla Carousel (Svelte)](https://www.embla-carousel.com) - `embla-carousel-svelte`
-- [Unovis](https://unovis.dev) - `@unovis/svelte`, `@unovis/ts`
-- [Chart.js](https://www.chartjs.org) - `chart.js`, `chartjs-adapter-dayjs-4`
+- [LayerChart](https://layerchart.com) - `layerchart`
 - [mode-watcher](https://www.npmjs.com/package/mode-watcher)
 - [runed](https://runed.dev)
 - [svelte-sonner](https://www.npmjs.com/package/svelte-sonner)
@@ -34,7 +36,7 @@ title: Licenses
 - [satteri](https://www.npmjs.com/package/satteri)
 - [satteri-expressive-code](https://www.npmjs.com/package/satteri-expressive-code)
 
-- [Tauri](https://tauri.app) - `@tauri-apps/api`, `@tauri-apps/cli`, `@tauri-apps/plugin-websocket`, `tauri`, `tauri-build`, `tauri-plugin-log`, `tauri-plugin-websocket`
+- [Tauri](https://tauri.app) - `@tauri-apps/api`, `@tauri-apps/cli`, `@tauri-apps/plugin-http`, `@tauri-apps/plugin-websocket`, `tauri`, `tauri-build`, `tauri-plugin-http`, `tauri-plugin-log`, `tauri-plugin-websocket`
 
 - [Starlight contextual menu](https://www.npmjs.com/package/starlight-contextual-menu)
 - [starlight-image-zoom](https://www.npmjs.com/package/starlight-image-zoom)
@@ -58,7 +60,6 @@ title: Licenses
 - [AWS SDK for JavaScript](https://aws.amazon.com/sdk-for-javascript/) - `@aws-sdk/client-s3`
 
 - [ky](https://www.npmjs.com/package/ky)
-- [Socket.IO](https://socket.io) - `socket.io`, `socket.io-client`, `@socket.io/bun-engine`
 - [Octokit](https://octokit.github.io/rest.js/) - `octokit`
 - [OpenAI SDK](https://www.npmjs.com/package/openai)
 - [DeepL Node SDK](https://www.npmjs.com/package/deepl-node)
@@ -82,17 +83,20 @@ title: Licenses
 - [@lukez/fast-deep-equal](https://www.npmjs.com/package/@lukez/fast-deep-equal)
 - [randomstring](https://www.npmjs.com/package/randomstring)
 - [dotenv](https://www.npmjs.com/package/dotenv)
-- [cross-env](https://www.npmjs.com/package/cross-env)
 - [sharp](https://sharp.pixelplumbing.com)
 - [canvas](https://www.npmjs.com/package/canvas)
 - [schema-dts](https://www.npmjs.com/package/schema-dts)
+- [topgg-api-types](https://www.npmjs.com/package/topgg-api-types)
+- [slugify](https://www.npmjs.com/package/slugify)
+- [fast-xml-builder](https://www.npmjs.com/package/fast-xml-builder)
+- [yaml](https://eemeli.org/yaml/)
 - [vite-plugin-devtools-json](https://www.npmjs.com/package/vite-plugin-devtools-json)
-- [globals](https://www.npmjs.com/package/globals)
 
-- [Fontsource](https://fontsource.org) - `@fontsource-variable/geist`, `@fontsource-variable/raleway`
+- [Fontsource](https://fontsource.org) - `@fontsource-variable/archivo`, `@fontsource-variable/big-shoulders`, `@fontsource-variable/geist`, `@fontsource-variable/raleway`, `@fontsource/architects-daughter`
 - [Geist](https://vercel.com/font) - `geist`
 
 - [Prettier with plugins](https://prettier.io) - `prettier`, `prettier-plugin-svelte`, `prettier-plugin-tailwindcss`, `prettier-plugin-astro`
+- [husky](https://typicode.github.io/husky/)
 
 - [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) - `@types/node`, `@types/bun`, `@types/humanize-duration`, `@types/jsonwebtoken`, `@types/randomstring`, `@types/uuid`
 
@@ -101,6 +105,7 @@ title: Licenses
 ## Go
 
 - [coder/websocket](https://github.com/coder/websocket)
+- [Sentry Go SDK](https://github.com/getsentry/sentry-go) - `sentry-go`
 
 ## Rust
 
