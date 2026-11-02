@@ -17,10 +17,6 @@ pnpm gen          # regenerate wrangler types (worker-configuration.d.ts)
 
 Deploy via Wrangler: `wrangler deploy` (targets Cloudflare Workers, config in `wrangler.jsonc`).
 
-### WSL
-
-STOP: Do not run ANY `pnpm` commands in WSL. Tell user to use Windows Terminal or PowerShell instead.
-
 ## Development
 
 When starting the dev server, use background mode:
