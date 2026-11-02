@@ -75,7 +75,6 @@ title: Licenses
 - [@the-lukez/li18n](https://www.npmjs.com/package/@the-lukez/li18n)
 
 - [dayjs](https://day.js.org)
-- [humanize-duration](https://www.npmjs.com/package/humanize-duration)
 - [uuid](https://www.npmjs.com/package/uuid)
 - [zod](https://zod.dev) - `zod`, `zod-validation-error`
 - [@sapphire/snowflake](https://www.npmjs.com/package/@sapphire/snowflake)
@@ -98,7 +97,7 @@ title: Licenses
 - [Prettier with plugins](https://prettier.io) - `prettier`, `prettier-plugin-svelte`, `prettier-plugin-tailwindcss`, `prettier-plugin-astro`
 - [husky](https://typicode.github.io/husky/)
 
-- [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) - `@types/node`, `@types/bun`, `@types/humanize-duration`, `@types/jsonwebtoken`, `@types/randomstring`, `@types/uuid`
+- [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) - `@types/node`, `@types/bun`, `@types/jsonwebtoken`, `@types/randomstring`, `@types/uuid`
 
 - [Wrangler (Cloudflare)](https://developers.cloudflare.com/workers/wrangler/) - `wrangler`
 
