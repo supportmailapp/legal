@@ -1,43 +1,31 @@
-# Astro Starter Kit: Minimal
+# SupportMail Legal
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+Source of [legal.supportmail.dev](https://legal.supportmail.dev): the privacy policy, terms of service, legal notice, right of withdrawal and open-source licenses list for SupportMail.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Static [Astro](https://astro.build) site, deployed to Cloudflare Workers (assets only).
 
-## 🚀 Project Structure
+## Documents
 
-Inside of your Astro project, you'll see the following folders and files:
+Each document lives in `src/content/legal/<doc>/`.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **Versioned** (`privacy`, `terms`): one file per version, named `<YYYY-MM-DD>.md`. The newest file is shown at `/<doc>`; older ones stay reachable at `/<doc>/<YYYY-MM-DD>`.
+- **Static** (`legal-notice`, `right-of-withdrawal`, `licenses`): a single `index.md`.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+To publish a new version of the privacy policy or terms, add a new dated file. Do not edit old versions.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Development
 
-Any static assets, like images, can be placed in the `public/` directory.
+Requires Node 26 and pnpm 12.
 
-## 🧞 Commands
+| Command        | Action                                   |
+| :------------- | :--------------------------------------- |
+| `pnpm install` | Install dependencies                     |
+| `pnpm dev`     | Start the dev server at `localhost:4321` |
+| `pnpm build`   | Build the site to `./dist/`              |
+| `pnpm preview` | Preview the build locally                |
+| `pnpm format`  | Format with Prettier                     |
 
-All commands are run from the root of the project, from a terminal:
+## License
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Site code: [MIT](LICENSE)
+- Legal documents in `src/content/legal/`: all rights reserved, see [LICENSE-CONTENT](LICENSE-CONTENT)
