@@ -44,9 +44,7 @@ const docTypes = NAV_ORDER.filter((d) => known.has(d));
     <script src="../scripts/global.js"></script>
   </head>
   <body class="bg-background text-foreground min-h-screen">
-    <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border px-6 py-3 flex gap-6 items-center"
-    >
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border px-6 py-3 flex gap-6 items-center">
       <a
         href="/"
         class="font-semibold text-sm text-muted-foreground hover:text-foreground transition-colors shrink-0 flex items-center gap-1"
@@ -60,45 +58,73 @@ const docTypes = NAV_ORDER.filter((d) => known.has(d));
       </a>
 
       <div class="hidden lg:flex gap-4">
-        {
-          docTypes.map((dt) => (
-            <a
-              href={`/${dt}`}
-              class:list={[
-                "text-sm capitalize transition-colors",
-                dt === docType
-                  ? "text-foreground font-medium underline underline-offset-4"
-                  : "text-muted-foreground hover:text-foreground",
-              ]}
-            >
-              {dt.replace(/-/g, " ")}
-            </a>
-          ))
-        }
+        {docTypes.map((dt) => (
+          <a
+            href={`/${dt}`}
+            class:list={[
+              "text-sm capitalize transition-colors",
+              dt === docType
+                ? "text-foreground font-medium underline underline-offset-4"
+                : "text-muted-foreground hover:text-foreground",
+            ]}
+          >
+            {dt.replace(/-/g, " ")}
+          </a>
+        ))}
       </div>
 
       <select
         class="lg:hidden text-sm bg-background border border-border rounded px-2 py-1 text-foreground capitalize cursor-pointer"
         onchange="location.href=this.value"
       >
-        {
-          docTypes.map((dt) => (
-            <option
-              value={`/${dt}`}
-              selected={dt === docType}
-              class="capitalize bg-background text-foreground"
-            >
-              {dt.replace(/-/g, " ")}
-            </option>
-          ))
-        }
+        {docTypes.map((dt) => (
+          <option
+            value={`/${dt}`}
+            selected={dt === docType}
+            class="capitalize bg-background text-foreground"
+          >
+            {dt.replace(/-/g, " ")}
+          </option>
+        ))}
       </select>
     </nav>
 
     <div class="max-w-6xl mx-auto px-6 pt-17 pb-10 flex gap-12">
-      {
-        versions.length > 0 && (
-          <aside class="hidden lg:block w-44 shrink-0">
+      {versions.length > 0 && (
+        <aside class="hidden lg:block w-44 shrink-0">
+          <p class="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+            Versions
+          </p>
+          <ul class="space-y-1">
+            {versions.map((v) => (
+              <li>
+                <a
+                  href={v.href}
+                  class:list={[
+                    "flex items-center gap-1.5 text-sm px-2 py-1 rounded transition-colors",
+                    v.isActive
+                      ? "bg-primary/10 text-primary font-medium"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted",
+                  ]}
+                >
+                  {v.effectiveDate.toISOString().slice(0, 10)}
+                  {v.isLatest && (
+                    <span class="text-xs text-muted-foreground">(latest)</span>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
+
+      <main class="min-w-0 flex-1">
+        <article class="prose dark:prose-invert max-w-none">
+          <slot />
+        </article>
+
+        {versions.length > 1 && (
+          <section class="lg:hidden mt-10 border-t border-border pt-6">
             <p class="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
               Versions
             </p>
@@ -124,46 +150,8 @@ const docTypes = NAV_ORDER.filter((d) => known.has(d));
                 </li>
               ))}
             </ul>
-          </aside>
-        )
-      }
-
-      <main class="min-w-0 flex-1">
-        <article class="prose dark:prose-invert max-w-none">
-          <slot />
-        </article>
-
-        {
-          versions.length > 1 && (
-            <section class="lg:hidden mt-10 border-t border-border pt-6">
-              <p class="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-                Versions
-              </p>
-              <ul class="space-y-1">
-                {versions.map((v) => (
-                  <li>
-                    <a
-                      href={v.href}
-                      class:list={[
-                        "flex items-center gap-1.5 text-sm px-2 py-1 rounded transition-colors",
-                        v.isActive
-                          ? "bg-primary/10 text-primary font-medium"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted",
-                      ]}
-                    >
-                      {v.effectiveDate.toISOString().slice(0, 10)}
-                      {v.isLatest && (
-                        <span class="text-xs text-muted-foreground">
-                          (latest)
-                        </span>
-                      )}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )
-        }
+          </section>
+        )}
       </main>
     </div>
   </body>

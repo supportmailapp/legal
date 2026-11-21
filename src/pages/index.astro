@@ -33,15 +33,13 @@ const docTypes = [...byDocType.entries()]
       <h1>Legal</h1>
       <p>Legal documents and policies.</p>
       <ul class="space-y-2!">
-        {
-          docTypes.map((dt) => (
-            <li>
-              <a href={`/${dt}`}>
-                {byDocType.get(dt)?.data.title ?? dt.replace(/-/g, " ")}
-              </a>
-            </li>
-          ))
-        }
+        {docTypes.map((dt) => (
+          <li>
+            <a href={`/${dt}`}>
+              {byDocType.get(dt)?.data.title ?? dt.replace(/-/g, " ")}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   </body>
